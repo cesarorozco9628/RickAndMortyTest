@@ -29,7 +29,7 @@ const CHAQ = () => {
                       <div className='card'>
                         <div className='card-chart'>
                             <div className='card-img'>
-                                <img className='img' src={element.image}/>
+                                <img className='img' alt={`image_${element.name}`} src={element.image}/>
                             </div>
                             <div className='card-text'>
                                 <p>Name: {element.name}</p>

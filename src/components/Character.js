@@ -27,7 +27,7 @@ const Char = () => {
                 <div className='card-chart-info'>
                    <div className='card-info'>
                         <div className='card-img-info'>
-                            <img className='img-info' src={data.character.image}/>
+                            <img className='img-info' alt={`image_${data.character.name}`} src={data.character.image}/>
                         </div>
                         <div className='card-text-info'>
                             <p>Name: {data.character.name}</p>

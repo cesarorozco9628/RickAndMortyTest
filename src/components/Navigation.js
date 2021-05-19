@@ -1,8 +1,7 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const Navigation = () => {
-    const history = useHistory();
     const showMenu = () => {
         const toggle = document.getElementById('toggle');
         const navbar = document.getElementById('navbar');
@@ -25,14 +24,14 @@ const Navigation = () => {
 
     return(
         <nav id='header'>
-            <a className='logo' onClick={() => history.push('/')}>Rick and Morty</a>
+            <NavLink className='logo' exact to='/'>Rick and Morty</NavLink>
             <div id="toggle" onClick={showMenu}>
             </div>
             <div id='navbar'>
                 <ul>
-                    <li onClick={() => history.push(`/`)}><a>Home</a></li>
-                    <li onClick={() => history.push(`/characters`)}><a>Characters</a></li>
-                    <li onClick={() => history.push(`/episodes`)}><a>Episodes</a></li>
+                    <li><NavLink exact to='/'>Home</NavLink></li>
+                    <li><NavLink exact to='/characters'>Characters</NavLink></li>
+                    <li><NavLink exact to='/episodes'>Episodes</NavLink></li>
                 </ul>
             </div>
         </nav>

@@ -13,7 +13,7 @@ import {ApolloProvider} from 'react-apollo';
 
 const client = new ApolloClient({
   uri:'https://rickandmortyapi.com/graphql'
-})
+});
 
 
 
