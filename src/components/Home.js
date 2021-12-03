@@ -10,9 +10,13 @@ const Home = () => {
             <Navigation/>
             <section>
                 <div className='container text-home'>
-                    <h1>welcome and have fun {user} !!</h1>
+                    <h1>Bienvenido  {user} !!</h1>
                     <p>
-                        test demonstrating the handling of the requested technologies with the consumption of the rick and morty api in a responsive SPA
+                        Pagina Realizado por: 
+                    </p>
+                    <p>
+                        Esta pagina consume un API´s de una tienda geek desarrollada con las tecnoligias Java, SpringBoot en la parte del Back-End.
+                        En el Front-End se utiliza el Framework React.
                     </p>
                     <div className='img-home'></div>
                 </div>

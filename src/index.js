@@ -10,7 +10,6 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from 'react-apollo';
 
-
 const client = new ApolloClient({
   uri:'https://rickandmortyapi.com/graphql'
 });
@@ -21,11 +20,9 @@ const store = createStore(Reducer, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
       <Provider store={store}>
         <App />
       </Provider>
-    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

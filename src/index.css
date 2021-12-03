@@ -92,7 +92,7 @@ nav{
   overflow: hidden;
 }
 #navbar.active {
-  width: 416px;
+  width: 820px;
 }
 
 #navbar ul {
@@ -140,7 +140,9 @@ section{
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  background-image: url(https://th.bing.com/th/id/OIP.t2_OWSTKDVITRBsPK7Nr-QHaFj?pid=ImgDet&rs=1);
+  background-image: url('https://gestion.pe/resizer/8iUsBTVCyJB7idKSiRTZVqeIDWg=/1200x800/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/K7WHDXFB7VASRK7FCX5MLE5BEI.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .card{
   border: none;
@@ -271,6 +273,40 @@ section{
   align-items: center;
 }
 
+.m-top{
+  margin-top: 6rem;
+}
+.grid-client{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+  padding: 1rem;
+}
+
+.grid-buttons{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.grid-x{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 40% 60%;
+}
+.grid-xx{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 30% 30% 15% 25%;
+  padding: 1.5rem;;
+}
+.grid-yx{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 60% 40%;
+}
 /* Responsive */
 
 @media (max-width: 991px){
@@ -403,6 +439,8 @@ section{
   height: 12%;
 }
 }
+
+
 
 
 @media (max-width: 600px){

@@ -24,14 +24,17 @@ const Navigation = () => {
 
     return(
         <nav id='header'>
-            <NavLink className='logo' exact to='/'>Rick and Morty</NavLink>
+            <NavLink className='logo' exact to='/'>Project</NavLink>
             <div id="toggle" onClick={showMenu}>
             </div>
             <div id='navbar'>
                 <ul>
                     <li><NavLink exact to='/'>Home</NavLink></li>
-                    <li><NavLink exact to='/characters'>Characters</NavLink></li>
-                    <li><NavLink exact to='/episodes'>Episodes</NavLink></li>
+                    <li><NavLink exact to='/Products'>Productos</NavLink></li>
+                    <li><NavLink exact to='/Client'>Clientes</NavLink></li>
+                    <li><NavLink exact to='/Sells'>Ventas</NavLink></li>
+                    <li><NavLink exact to='/Reports'>Reportes</NavLink></li>
+                    <li><NavLink exact to='/Consolidation'>Consolidación</NavLink></li>
                 </ul>
             </div>
         </nav>
