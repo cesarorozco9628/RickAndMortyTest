@@ -1,39 +1,39 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import {loginAccess, User} from '../Redux/Actions'
+import { useDispatch, useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom'
 import Navigation from './Navigation';
-import {Users} from '../Redux/Actions'
+import { Users, loginAccess} from '../Redux/Actions'
 
 const Register = () => {
     const {register, handleSubmit} = useForm();
     const dispatch = useDispatch();
     const history = useHistory();
+    const Data = useSelector(state => state.User)
 
-
-    const regist = (data) => {
-        dispatch(loginAccess(true));
-        dispatch(User(data));
-        history.push('/');
-    }
-     // const HandleLogin = (data) => {
-    //     const {user, password} = data;
-    //     Data !== null && Data.map((element) => {
-    //         if(element.usuario === user && element.password === password){
-    //              dispatch(GetLogin(true));
-    //              history.push('/');
-    //         }
-    //     })
+    // const regist = (data) => {
+    //     dispatch(loginAccess(true));
+    //     dispatch(User(data));
+    //     history.push('/');
     // }
-    // useEffect(() => {
-    //   Users();
-    // }, [])
+     const HandleLogin = (data) => {
+        const {user, password} = data;
+        Data !== null && Data.map((element) => {
+            if(element.usuario === user && element.password === password){
+                 dispatch(loginAccess(true));
+                 history.push('/');
+            }
+        })
+    }
+    useEffect(() => {
+        console.log('we did it' );
+      Users();
+    }, [])
     return (
         <>
             <Navigation/>
             <section className='container'>
-                <form onSubmit={handleSubmit(regist)}>
+                <form onSubmit={handleSubmit(HandleLogin)}>
                     <div className="mb-3">
                         <label className="form-label" >User</label>
                         <input type="text" className="form-control"name='user' ref={register} required/>
