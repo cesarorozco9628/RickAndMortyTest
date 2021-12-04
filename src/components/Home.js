@@ -3,14 +3,14 @@ import {useSelector} from 'react-redux';
 import Navigation from '../components/Navigation';
 
 const Home = () => {
-    const user = useSelector(state => state.User[0].user);
+    const user = useSelector(state => state.User);
 
     return(
         <>
             <Navigation/>
             <section>
                 <div className='container text-home'>
-                    <h1>Bienvenido  {user} !!</h1>
+                    <h1>Bienvenido  {user[0].nombre_usuario} !!</h1>
                     <p>
                         Pagina Realizado por: 
                     </p>

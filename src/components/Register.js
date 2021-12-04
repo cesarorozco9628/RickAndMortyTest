@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom'
 import Navigation from './Navigation';
-import { Users, loginAccess} from '../Redux/Actions'
+import { Users, loginAccess, User} from '../Redux/Actions'
 
 const Register = () => {
     const {register, handleSubmit} = useForm();
@@ -11,14 +11,14 @@ const Register = () => {
     const history = useHistory();
     const Data = useSelector(state => state.User)
 
-    // const regist = (data) => {
-    //     dispatch(loginAccess(true));
-    //     dispatch(User(data));
-    //     history.push('/');
-    // }
+    const regist = (data) => {
+        dispatch(loginAccess(true));
+        dispatch(User(data));
+        history.push('/');
+    }
      const HandleLogin = (data) => {
         const {user, password} = data;
-        Data !== null && Data.map((element) => {
+        Data.map((element) => {
             if(element.usuario === user && element.password === password){
                  dispatch(loginAccess(true));
                  history.push('/');
@@ -26,8 +26,8 @@ const Register = () => {
         })
     }
     useEffect(() => {
-      dispatch(Users());
-    }, [])
+        dispatch(Users());
+    },[])
     return (
         <>
             <Navigation/>

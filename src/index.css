@@ -307,6 +307,27 @@ section{
   grid-template-rows: auto;
   grid-template-columns: 60% 40%;
 }
+
+.center-view{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.table-head{
+  width: 40%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+  background-color: #12334e;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;;
+}
 /* Responsive */
 
 @media (max-width: 991px){
