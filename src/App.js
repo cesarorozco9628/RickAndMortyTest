@@ -4,6 +4,8 @@ import Home from './components/Home';
 import {Products} from './components/Products';
 import {Client} from './components/Client';
 import {Sells} from './components/Sells';
+import {Reports} from './components/Reports';
+import {Consoloditions} from './components/Consoloditions';
 import ProtectedRoute from './components/ProtectedRoute';
 import Register from './components/Register';
 
@@ -14,16 +16,16 @@ function App() {
   return (
         <Router>
             <Switch>
-                {/* <Route exact path='/Consolidation'>
+                <Route exact path='/Consolidation'>
                     <ProtectedRoute>
-                        <Products/>
+                        <Consoloditions/>
                     </ProtectedRoute>
-                </Route> */}
-                {/* <Route exact path='/Reports'>
+                </Route>
+                <Route exact path='/Reports'>
                     <ProtectedRoute>
-                        <Character/>
+                        <Reports/>
                     </ProtectedRoute>
-                </Route> */}
+                </Route>
                 <Route exact path='/Sells'>
                     <ProtectedRoute>
                         <Sells/>
