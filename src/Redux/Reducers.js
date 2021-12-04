@@ -2,8 +2,8 @@ import {ACTIONS_TYPE} from './Actions';
 
 const INITIAL_STATE = {
     login: false,
-    pokemonList : [],
     User: [],
+    Error:''
 }
 
 const Reducer = (state = INITIAL_STATE, action) => {
@@ -17,17 +17,16 @@ const Reducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 login: false,
-                pokemonList: [],
-            }
-        case ACTIONS_TYPE.PokemonsList:
-            return {
-                ...state,
-                pokemonList: [...state.pokemonList, action.payload],
             }
         case ACTIONS_TYPE.User:
             return {
                 ...state,
-                User: [...state.User, action.payload],
+                User: action.payload
+            }
+        case ACTIONS_TYPE.Error:
+            return {
+                ...state,
+                Error:action.payload
             }
         default:
             return state;    

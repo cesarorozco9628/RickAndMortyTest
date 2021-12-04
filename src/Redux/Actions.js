@@ -34,12 +34,25 @@ const ErrorPetition = (value) => {
 }
 export const Users = () => {
     return async (dispatch) => {
-        return axios.get('localhost:8080/get_list_user')
+        return axios.get('http://localhost:8080/get_list_user')
             .then((result) => {
                 dispatch(User(result.data));
             })
             .catch((err) => {
                 dispatch(ErrorPetition(err.message));
+            })
+    }
+}
+
+//testr
+export const GetClient = () => {
+    return async (dispatch) => {
+        return axios.get('http://localhost:8080/get_customer_byid/{id}')
+            .then((response) => {
+
+            })
+            .catch((err) => {
+
             })
     }
 }

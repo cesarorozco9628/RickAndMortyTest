@@ -18,7 +18,7 @@ const Register = () => {
     }
      const HandleLogin = (data) => {
         const {user, password} = data;
-        Data !== null && Data.map((element) => {
+        Data.map((element) => {
             if(element.usuario === user && element.password === password){
                  dispatch(loginAccess(true));
                  history.push('/');
@@ -26,13 +26,13 @@ const Register = () => {
         })
     }
     useEffect(() => {
-      Users();
-    }, [])
+        dispatch(Users());
+    },[])
     return (
         <>
             <Navigation/>
             <section className='container'>
-                <form onSubmit={handleSubmit(regist)}>
+                <form onSubmit={handleSubmit(HandleLogin)}>
                     <div className="mb-3">
                         <label className="form-label" >User</label>
                         <input type="text" className="form-control"name='user' ref={register} required/>
