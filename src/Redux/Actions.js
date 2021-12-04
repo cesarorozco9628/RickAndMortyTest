@@ -43,6 +43,8 @@ export const Users = () => {
             })
     }
 }
+
+//testr
 export const GetClient = () => {
     return async (dispatch) => {
         return axios.get('http://localhost:8080/get_customer_byid/{id}')
