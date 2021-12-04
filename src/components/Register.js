@@ -26,8 +26,7 @@ const Register = () => {
         })
     }
     useEffect(() => {
-        console.log('we did it' );
-      Users();
+      dispatch(Users());
     }, [])
     return (
         <>

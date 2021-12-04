@@ -36,9 +36,11 @@ export const Users = () => {
     return async (dispatch) => {
         return axios.get('localhost:8080/get_list_user')
             .then((result) => {
+                debugger;
                 dispatch(User(result.data));
             })
             .catch((err) => {
+                debugger;
                 dispatch(ErrorPetition(err.message));
             })
     }
